@@ -1,0 +1,34 @@
+🧩 1. Análisis Exploratorio del Conjunto de Datos
+Para abordar el estudio de la desinformación y su relación con la polarización ideológica, se realizó un análisis exploratorio inicial del dataset seleccionado (WELFake). Este análisis tuvo como objetivo comprender la estructura del conjunto de datos, sus características textuales y la distribución de las clases, así como identificar patrones preliminares que pudieran resultar relevantes antes de aplicar técnicas de procesamiento del lenguaje natural y modelado supervisado.
+1.1. Descripción general del dataset
+El dataset está compuesto por miles de artículos clasificados en dos categorías:
+0 — Real
+1 — Fake
+Las variables principales incluyen el texto completo de la noticia, su título (cuando está disponible) y la etiqueta asociada. Los datos están en formato textual y numérico, y no presentan problemas significativos de valores nulos, por lo que no fue necesario aplicar estrategias de imputación. La estructura del dataset es adecuada para tareas de clasificación supervisada.
+1.2. Estadísticas básicas y distribución de clases
+Se observó una distribución equilibrada entre noticias reales y falsas, lo cual es favorable para el entrenamiento de modelos sin necesidad de aplicar técnicas de rebalanceo. Esta simetría entre clases reduce el riesgo de sesgos hacia una categoría y permite una evaluación más fiable.
+En cuanto a la longitud de los textos, se calculó el número de palabras por noticia. La mayoría de los artículos se sitúan entre 100 y 600 palabras, con pocos casos que superan este rango. Este comportamiento es típico en datasets periodísticos o derivados de redes sociales, donde predominan piezas informativas breves o de formato editorial reducido.
+1.3. Comparación de longitudes entre noticias reales y fake
+El análisis de la longitud por clase reveló diferencias estructurales relevantes:
+Las noticias reales tienden a mostrar mayor variabilidad en su extensión, distribuyéndose a lo largo de una gama más amplia de longitudes.
+Las noticias fake presentan una tendencia a ser más cortas y menos diversas en su tamaño.
+Este patrón coincide con hallazgos en literatura previa sobre desinformación, donde los contenidos falsos suelen estar diseñados para ser rápidos de consumir y fácilmente difundibles.
+1.4. Análisis preliminar del contenido textual
+Para comprender mejor las características lingüísticas, se analizaron las palabras más frecuentes en cada clase. Las observaciones principales fueron:
+Las noticias reales emplean un vocabulario más descriptivo, informativo y temáticamente variado.
+Las noticias fake presentan mayor repetición de términos emocionalmente cargados o vinculados a narrativas sensacionalistas.
+Estos resultados sugieren diferencias semánticas que pueden resultar útiles para la representación vectorial y el modelado.
+1.5. Visualización mediante nubes de palabras
+Las nubes de palabras generadas para cada categoría confirmaron visualmente estas tendencias.
+Las noticias reales mostraron mayor diversidad léxica, mientras que las fake exhibieron concentraciones de palabras llamativas o polarizantes. Estas visualizaciones permiten identificar de manera intuitiva patrones de contenido que pueden relacionarse con estrategias de manipulación narrativa.
+1.6. Ejemplos representativos por clase
+Se examinaron muestras individuales de textos reales y falsos, lo que permitió identificar diferencias en el estilo de redacción:
+Las noticias reales suelen presentar estructuras más coherentes, referencias informativas y mayor profundidad descriptiva.
+Las noticias falsas tienden a utilizar frases más directas, simplificadas o diseñadas para provocar una respuesta emocional inmediata.
+Esta observación cualitativa complementa los hallazgos cuantitativos y apoya la hipótesis de que la desinformación sigue patrones estilísticos distintivos.
+1.7. Hipótesis iniciales
+A partir del análisis exploratorio pueden formularse varias hipótesis para guiar las etapas posteriores del proyecto:
+La longitud del texto podría ser un indicador útil para distinguir entre noticias reales y fake.
+Las diferencias léxicas sugieren que ciertas representaciones vectoriales (como TF-IDF o embeddings contextuales) captarán patrones discriminativos relevantes.
+La presencia de términos emocionalmente cargados en textos falsos apunta a una posible relación entre desinformación y polarización ideológica, al favorecer mensajes diseñados para activar sesgos previos o reforzar posturas extremas.
+La diversidad temática de las noticias reales frente a la repetitividad de ciertos contenidos fake podría reflejar diferencias en las comunidades que los comparten, lo que abre la puerta a estudiar patrones de polarización a nivel de usuario.
