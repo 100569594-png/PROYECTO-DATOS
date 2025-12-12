@@ -218,7 +218,7 @@ Antes de adentranos en las conclusiones, se quire recalcar que el objetivo princ
 
 Los resultados obtenidos muestran que la elección de la representación vectorial juega un papel importante en el rendimiento de los modelos. En el caso de TF-IDF, los modelos lineales, especialmente SVM, presentan un comportamiento muy competitivo, alcanzando la mayor precisión en la detección de noticias reales. Para Word2Vec y embeddings BERT, la red neuronal destaca como el modelo más adecuado, demostrando una mayor capacidad para explotar representaciones densas y capturar relaciones semánticas complejas.
 
-De forma consistente a lo largo de todos los experimentos, el clasificador K-NN ha mostrado un rendimiento claramente inferior al resto de modelos, especialmente en la detección de noticias reales, lo que limita su utilidad en este contexto. Por su parte, la regresión logística ofrece resultados estables y razonables, aunque generalmente por debajo de los obtenidos por SVM y la red neuronal.
+De forma consistente a lo largo de todos los experimentos, el clasificador KNN ha mostrado un rendimiento claramente inferior al resto de modelos, especialmente en la detección de noticias reales, lo que limita su utilidad en este contexto. Por su parte, la regresión logística ofrece resultados estables y razonables, aunque generalmente por debajo de los obtenidos por SVM y la red neuronal.
 
 El mejor rendimiento global se obtiene con el modelo Transformer preentrenado ajustado mediante fine-tuning. Este enfoque supera al resto de técnicas evaluadas, alcanzando una accuracy del 99% y valores altos de precisión en ambas clases.
 
