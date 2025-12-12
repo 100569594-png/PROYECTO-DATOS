@@ -98,7 +98,7 @@ A continuación, se encuentrán técnicas aplicadas al conjunto de datos, con el
   
 - Lematización (WordNet): transformación de las palabras a su forma base.
 
-El resultado se almacena en las columnas tokens y text_limpio, necesarias para las técnicas de vectorización.
+Una vez el preprocesado del texto ha finalizado, el resultado se almacena en las columnas tokens y text_limpio, necesarias para las técnicas de vectorización.
 
 ## 3.2. Representación vectorial del texto
 
