@@ -164,7 +164,7 @@ Durante la evaluación se aplica una función sigmoide para obtener probabilidad
 
 - **Modelo Transformer con fine-tuning:** se empleó el modelo preentrenado BERT-base uncased, adaptándolo a nuestro proyecto mediante un proceso de fine-tuning orientado a la clasificación de noticias reales y falsas. Para ello, se ajustaron los parámetros del modelo utilizando nuestro conjunto de entrenamiento. Una vez entrenado, se realizaron predicciones sobre el conjunto de test y se obtuvieron las métricas correspondientes, permitiendo evaluar su rendimiento y compararlo con el resto de modelos generados.
 
-## 5.Resultados experimentales.
+## 5.Resultados experimentales y discusión.
 
 
 A lo largo de esta sección se presentan los resultados obtenidos para evaluar el rendimiento de los distintos modelos. El objetivo principal ha sido identificar el modelo más adecuado para su posible integración en un sistema de validación de la veracidad de noticias, asegurando la confianza  en las noticias validadas.
@@ -182,33 +182,24 @@ En el caso de la regresión logística, se obtienen también buenos resultados, 
 En general, se observa un buen rendimiento global de los modelos evaluados, con la excepción de KNN, cuyo desempeño es notablemente inferior al del resto. Atendiendo a la precisión en la clase 0, los modelos pueden ordenarse de la siguiente forma: SVM>RN>LG>KNN
 
 ##### Mejor modelo clasificador para TF-IDF: SVM
-Para e
 
 
 ### Word2Vec
 <img width="643" height="112" alt="image" src="https://github.com/user-attachments/assets/7a448159-56f7-4abd-96b2-41eca2f53adb" />
 
-#### Precisión clase 0
-
-- La Red Neuronal demuestra ser la más fiable  para identificar noticias reales sin confundirlas con falsas (menos falsos positivos).
-- SVM y LR son razonablemente buenos.
-- KNN es claramente el peor, comportamiento ya visto durante TF-IDF.
-#### Accuracy
-
-El valor más alto es el obtenido por la red neuronal, convirtiéndo el modelo más equilibrado y con mayor tasa de aciertos.Siguiendo la siguiente distribución entre modelos: RD>SVM> LG>KNN
+Incorpora información semántica, haciendo posible  que palabras con significados similares tengan representaciones vectoriales próximas. 
+La Red neuronal obtiene los mejores resultados, lo que significa que aprovecha de forma eficiente la información distribuida. Por otro lado,  SVM y Logistic Regression ofrecen un rendimiento adecuado, pero menor que en TF-IDF. KNN vuelve a ser el modelo más débil, aunque mejora  respecto a TF-IDF.Esto indica que los modelos lineales  se encuentran en desventaja, ya que este tipo de representación vectorial genera un espacio más complejo  y menos interpretable para los planos de separación lineales. Siguiendo la siguiente distribución entre modelos: RD>SVM> LG>KNN
 
 ##### Mejor modelo clasificador para Word2Vec: Red Neuronal
 
 ### BERT
 <img width="644" height="114" alt="image" src="https://github.com/user-attachments/assets/a60c6ddd-a293-4661-b55f-6650469711e7" />
 
-#### Precisión clase 0
-- La Red Neuronal vuelve a ser el modelo más fiable a la hora de clasificar una noticia como verdadera.
-- SVM y LR tienen un rendimiento  bueno y muy parecido.
-- KNN continúa con valores bajos, quedando descartado.
-  
-#### Accuracy
-El mejor resultado es obtenido por la Red Neuronal. Siguiendo la siguiente tendencia: RD>SVM> LG>KNN. 
+BERT ofrece la representación más avanzada, aprendiendo contextualmente mediante relaciones sintácticas y desambiguación semántica. En este caso, además, se aplicó fine-tuning, permitiendo que el modelo ajuste sus pesos.
+Entre los clasificadores evaluados, la Red neuronal destaca de forma clara, superando al resto de  clasificadores. Por un lado,  SVM y Logistic Regression obtienen rendimientos aceptables, aunque limitado por su linealidad. En contraste, KNN vuelve a mostrar el rendimiento más bajo, ya que es especialmente sensible a vectores de alta dimensión.
+
+BERT  es capaz de captar matices lingüísticos que TF-IDF y Word2Vec, lo que resulta clave en textos ambiguos o donde la manipulación informativa depende del tono, el contexto o la selección de palabras.
+En consecuencia, la red neuronal entrenada sobre los embeddings contextualizados de BERT puede definirse como el modelo más preciso y el que mejor se alinea con los objetivos.  Siguiendo la siguiente tendencia: RD>SVM> LG>KNN. 
 
 ##### Mejor modelo clasificador para BERT: Red Neuronal
 
@@ -216,30 +207,7 @@ El mejor resultado es obtenido por la Red Neuronal. Siguiendo la siguiente tende
 #### Modelo Transformer con fine-tuning
 
 <img width="683" height="185" alt="image" src="https://github.com/user-attachments/assets/253e8cbf-307c-4e23-97ef-9e58013706b5" />
-
-
-## 6. Discusión
-
-Durante este proyecto se han evaluado tres técnicas de representación vectorial del texto TF-IDF, Word2Vec y BERT, combinadas cada una de ellas con diferentes modelos de clasificación: Logistic Regression, SVM, KNN y Red neuronal.
- 
-### 6.1. TF-IDF
-Debido a que se basa en frecuencias sin incorporar contexto semántico muestra un rendimiento notablemente alto en modelos lineales como lo son Logistic Regression y SVM
-En cuanto a SVM, se obtienen los mejores resultados especialmente en accuracy y precision para ambas clases.  LR es prácticamente comparable a SVM, con resultados totalmente equilibrados. Por otro lado, KNN presenta el rendimiento más bajo, afectado por la alta dimensionalidad de TF-IDF. Por último, aunque la red neuronal ofrece resultados decentes, no supera a SVM, ya que debido a que TF-IDF no captura relaciones profundas entre palabras, se limita su potencial.
-Asimismo, TF-IDF proporciona una  representación robusta para modelos lineales. Su principal limitación es la falta de información semántica, lo que restringe la capacidad de los modelos más avanzados.
-
-### 6.2. Word2Vec
-Incorpora información semántica, haciendo posible  que palabras con significados similares tengan representaciones vectoriales próximas. 
-La Red neuronal obtiene los mejores resultados, lo que significa que aprovecha de forma eficiente la información distribuida. Por otro lado,  SVM y Logistic Regression ofrecen un rendimiento adecuado, pero menor que en TF-IDF. KNN vuelve a ser el modelo más débil, aunque mejora  respecto a TF-IDF.
-
-
-Esto indica que los modelos lineales  se encuentran en desventaja, ya que este tipo de representación vectorial genera un espacio más complejo  y menos interpretable para los planos de separación lineales.
-### 6.3. BERT
-BERT ofrece la representación más avanzada, aprendiendo contextualmente mediante relaciones sintácticas y desambiguación semántica. En este caso, además, se aplicó fine-tuning, permitiendo que el modelo ajuste sus pesos.
-
-Entre los clasificadores evaluados, la Red neuronal destaca de forma clara, superando al resto de  clasificadores. Por un lado,  SVM y Logistic Regression obtienen rendimientos aceptables, aunque limitado por su linealidad. En contraste, KNN vuelve a mostrar el rendimiento más bajo, ya que es especialmente sensible a vectores de alta dimensión.
-
-BERT  es capaz de captar matices lingüísticos que TF-IDF y Word2Vec, lo que resulta clave en textos ambiguos o donde la manipulación informativa depende del tono, el contexto o la selección de palabras.
-En consecuencia, la red neuronal entrenada sobre los embeddings contextualizados de BERT puede definirse como el modelo más preciso y el que mejor se alinea con los objetivos. 
+Este modelo obtiene el mejor rendimiento entre todas las técnicas evaluadas, alcanzando una accuracy del 99,31%. La precisión de la clase 0 (noticia real) es 0,9918, mientras que para la clase 1 (noticia falsa) asciende a 0,9945, lo que muestra que el modelo comete muy pocos falsos positivos y falsos negativos. Estos resultados hacen evidente la ventaja de los modelos transformer, capaces de capturar  dependencias semánticas y contextuales complejas.
 
 ## 7. Conclusiones
 
