@@ -84,9 +84,9 @@ Una vez se ha completado el preprocesamiento del texto, se pasa a la división d
 
 Para el correcto desarrollo del proyecto  se empleó una estructura de tres subconjuntos:
 
-Conjunto de entrenamiento (train): (60%)
-Conjunto de validación (validation): (20%)
-Conjunto de prueba (test): (20%)
+#### - Conjunto de entrenamiento (train): (60%)
+#### -Conjunto de validación (validation): (20%)
+#### -Conjunto de prueba (test): (20%)
 
 
 
@@ -103,7 +103,7 @@ La vectorización se realizó utilizando la clase TfidfVectorizer de la librerí
 La vectorización se ajustó sobre el conjunto de entrenamiento y se aplicó a los conjuntos de validación y test, quedando cada noticia representada mediante un vector de dimensión fija.
 
 
-#### Word2Vec
+### Word2Vec (Procesamiento de lenguaje)
 La segunda técnica de representación vectorial es Word2Vec, que permite capturar relaciones semánticas entre términos a partir de su contexto de aparición.
 
 Para su implementación se utilizó la librería gensim y los hiperparámetros seleccionados fueron:
@@ -124,10 +124,29 @@ Para su implementación se utilizó la librería gensim y los hiperparámetros s
 
 Cada noticia se representa como el promedio de los vectores de las palabras que lo componen.
 
+###  Embeddings contextuales (BERT)
+Como tercera técnica de representación vectorial se emplean los embeddings contextuales obtenidos mediante el Transformer preentrenado DistilBERT. Este modelo fue seleccionado por estar optimizado para textos en inglés y por su capacidad de sensibilidad al contexto.
+En este caso, el modelo no se entrena, sino que se utiliza para extraer las características, manteniendo los pesos congelados. Como hiperparámetros se seleccionó: 
 
-## 3.3. Modelos de clasificación
+- max_length: La longitud máxima de la secuencia de entrada es 256.
+- batch_size = 16.
+  
+Como resultado, cada noticia quedó representada mediante un vector correspondiente a la dimensión oculta del modelo.
 
-## 4.Resultados experimentales.
+
+
+## 4. Modelos de clasificación
+
+
+
+
+
+## 5.Resultados experimentales.
+
+A lo largo de esta sección se presentan los resultados obtenidos tras el entrenamiento y evaluación de los  distintos modelos desarrollados. El propósito principal es seleccionar el modelo más adecuado para un sistema de clasificación verídica  de noticias.
+
+Para la evaluación, se ha priorizado la Precisión de la clase 0 (Noticias Reales). Esta métrica es clave para valorar el rendimiento del modelo,  ya que mide la proporción de aciertos sobre el total de noticias etiquetadas como verdaderas.
+El objetivo es asegurar una alta confianza  en las noticias validadas, reduciendo drásticamente la posibilidad de catalogar erróneamente una noticia falsa como real.
 
 
 
