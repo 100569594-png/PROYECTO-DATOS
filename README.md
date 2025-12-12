@@ -167,13 +167,11 @@ Durante la evaluación se aplica una función sigmoide para obtener probabilidad
 ## 5.Resultados experimentales.
 
 
-A lo largo de esta sección se presentan los resultados obtenidos tras el entrenamiento y evaluación de los  distintos modelos desarrollados. El propósito principal es seleccionar el modelo más adecuado para un sistema de clasificación verídica  de noticias.
+A lo largo de esta sección se presentan los resultados obtenidos para evaluar el rendimiento de los distintos modelos. El objetivo principal ha sido identificar el modelo más adecuado para su posible integración en un sistema de validación de la veracidad de noticias, asegurando la confianza  en las noticias validadas.
 
-Para la evaluación, se han jugado con diferenticas métricas, sin embargo, se ha dedidido priorizar la Precisión de la clase 0 (Noticias Reales). Esta métrica es clave para valorar el rendimiento del modelo,  ya que mide la proporción de aciertos sobre el total de noticias etiquetadas como verdaderas.El objetivo es asegurar una alta confianza  en las noticias validadas, reduciendo drásticamente la posibilidad de catalogar erróneamente una noticia falsa como real, lo que hace como punto de partida ideal 
+Para la evaluación se emplearon distintas métricas de rendimiento, priorizando la precisión de la clase 0 (noticias reales), ya que para este contexto es especialmente relevante, y también el accuracy, proporcionando una medida sobre el rendimiento global del proyecto.
 
-Por otro lado, también se tendrá en cuenta como métrica evaluable el accuracy, proporcionando qué porcentaje total de predicciones son correctas sin distinguir entre clases. 
-
-A continuación se encuentran diferentes imagenes que comparán cada uno de los modelos de clasificación para cada técnica de representación vectorial del texto.
+A continuación se encuentran diferentes imágenes que comparán cada uno de los modelos de clasificación para cada técnica de representación vectorial del texto.
 
 ### TF-IDF
 <img width="642" height="112" alt="image" src="https://github.com/user-attachments/assets/1daa2ebc-d407-4fee-9f1f-e31c52eb616d" />
