@@ -1,30 +1,22 @@
  # Análisis de la polarización ideológica en redes sociales a partir de la propagación de contenidos desinformativos
 
 ## 1.Descripción del problema 
-Uno de los principales problemas que enfrentan las redes sociales y los medios digitales es la desinformación.  La verificación manual de la información se vuelve más difícil y la polarización ideológica se ve favorecida por la rápida propagación de contenidos falsos.  Este proyecto tiene como finalidad detectar automáticamente noticias falsas (fake news) mediante el análisis de su contenido textual, analizando distintas estrategias de representación vectorial y aplicando un clasificador.
-
-La base de datos empleada proviene del WELFake Dataset, que se compone de miles de noticias categorizadas como verdaderas (label = 0) o falsas (label = 1).  Cada entrada incluye el contenido textual de la noticia, que ha sido purificado y limpiado. Después de suprimir documentos sin texto, así como los que eran demasiado breves o excesivamente extensos (menos de 200 palabras o más de 2000), se filtró el dataset de datos para asegurar su coherencia y calidad, quedando listo para ser analizado.
-
-### Asimismo, se llevó a cabo un análisis de exploración que comprende:
-
- - Distribución de las clases.
-
- - Longitud de los textos y sus histogramas correspondientes.
-
- - Términos más comunes en cada clase.
-
- - Nubes de palabras para identificar patrones léxicos que diferencien.
-
-El propósito final es identificar la metodología que ofrece el rendimiento más alto en la detección automatizada de desinformación.
-
+Hoy en día, uno de los principales problemas a los que nos enfrentamos es la desinformación. Las redes sociales y los medios digitales facilitan la difusión rápida y masiva de contenidos, permitiendo que los usuarios compartan información sin que esta haya sido previamente verificada, lo que favorece la propagación de bulos y noticias falsas, y como consecuencia, se contribuye al aumento de la polarización ideológica.
+En este contexto, surge la necesidad de garantizar la veracidad de los textos, con el objetivo de mitigar los efectos de la desinformación. 
+Para ello, en este proyecto se realiza un preprocesamiento de los datos y se comparan distintas estrategias de representación vectorial del texto. En concreto, se implementan tres técnicas de vectorización, junto con varios modelos de clasificación supervisada de la librería scikit-learn y una red neuronal artificial.
+Finalmente, se emplea un modelo Transformer preentrenado mediante la librería Hugging Face, ajustado para la tarea de detección de noticias falsas. Y se compara con los modelos de clasificación implementados para determinar el más eficaz en la detección de contenido manipulado.
 
 
 ## 2. Análisis del conjunto de datos.
 
-El dataset está compuesto por un gran número de artículos clasificados en dos categorías:
+La base de datos empleada proviene del WELFake Dataset, este conjunto de datos esta compuesto por un gran número de artículos clasificados en dos categorías:
+
 0 — Real
 1 — Fake
-Las variables principales incluyen el texto completo de la noticia, su título (si se dispone de él) y la etiqueta asociada. Los datos se encuentran en formato  textual y numérico. Aquellos valores que correspondian a entrada incompletas o nulas, se purificaron, garantizando el contenido real para cada noticia, evitando fallos posteriores en el análisis lingüístico. Concluyendo que la estructura del dataset es adecuada para tareas de clasificación propuestas.
+
+Las variables principales incluyen el texto completo de la noticia, su título (si se dispone de él) y la etiqueta asociada. Los datos se encuentran en formato  textual y numérico, lo que permite aplicar técnicas de procesado de lenguaje natural y análisis contextual.
+
+Antes de su utilización, se llevo a cabo un proceso de depuración pudiendo asi garantizar la calidad del contenido. Se eliminaron aquellos valores que correspondian a entradas incompletas o inconsistentes con el objetivo de  garantizar un contenido robusto para  cada noticia. Todo ello, con el fin de evitar errores en las fases posteriores de tratamiento lingüístico y modelado.
 
 
 ## 2.2. Estadísticas básicas y distribución de clases. 
