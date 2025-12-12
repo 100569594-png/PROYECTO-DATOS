@@ -218,4 +218,9 @@ En consecuencia, la red neuronal entrenada sobre los embeddings contextualizados
 ## 7. Conclusiones
 
 
-bibliografia
+
+## 8. Bibliografía 
+
+YouTube. [Cómo hacer fine-tuning de un transformer] [Video]. YouTube. https://www.youtube.com/watch?v=YwfRtgcUddw
+
+DataCamp. (s.f.). PyTorch tutorial: Building a simple neural network from scratch. https://www.datacamp.com/es/tutorial/pytorch-tutorial-building-a-simple-neural-network-from-scratch
