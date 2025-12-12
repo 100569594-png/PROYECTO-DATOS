@@ -77,7 +77,7 @@ El  proyecto se desglosa en cuatro partes principales:
 
 Para el preprocesamiento del texto se han aplicado  técnicas estándar de NLP(Natural Language Processing). Estas técnicas se tratan de procedimientos fundamentales que permiten transformar texto en bruto en una representación totalmente estructurada, limpia y procesable por un modelo algorítmico.
 
-Estas técnicas sirven son utililes para reducir el ruido textual, normalizadar el lenguaje, extraer el significado de las palabras, preparar los datos para su posterior vectorización y mejorar el rendimiento de los modelos de clasificación. Si estas técnicas no se aplican previamente, el modelo trabajaría con un texto totalmente desordenado.
+Estas técnicas sirven son utiles para reducir el ruido textual, normalizadar el lenguaje, extraer el significado de las palabras, preparar los datos para su posterior vectorización y mejorar el rendimiento de los modelos de clasificación. Si estas técnicas no se aplican previamente, el modelo trabajaría con un texto totalmente desordenado.
 
 A continuación, se encuentrán técnicas aplicadas al conjunto de datos, con el objetivo de obtener los mejores resultados podibles.
 
