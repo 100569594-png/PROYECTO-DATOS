@@ -143,10 +143,22 @@ Como resultado, cada noticia quedó representada mediante un vector correspondie
 
 ## 5.Resultados experimentales.
 
+
 A lo largo de esta sección se presentan los resultados obtenidos tras el entrenamiento y evaluación de los  distintos modelos desarrollados. El propósito principal es seleccionar el modelo más adecuado para un sistema de clasificación verídica  de noticias.
 
 Para la evaluación, se ha priorizado la Precisión de la clase 0 (Noticias Reales). Esta métrica es clave para valorar el rendimiento del modelo,  ya que mide la proporción de aciertos sobre el total de noticias etiquetadas como verdaderas.
 El objetivo es asegurar una alta confianza  en las noticias validadas, reduciendo drásticamente la posibilidad de catalogar erróneamente una noticia falsa como real.
+
+
+Por otro lado, también se tendrá en cuenta como métrica evaluable el accuracy, proporcionando qué porcentaje total de predicciones son correctas sin distinguir entre clases. 
+
+
+
+<img width="642" height="112" alt="image" src="https://github.com/user-attachments/assets/1daa2ebc-d407-4fee-9f1f-e31c52eb616d" />
+
+<img width="643" height="112" alt="image" src="https://github.com/user-attachments/assets/7a448159-56f7-4abd-96b2-41eca2f53adb" />
+
+<img width="644" height="114" alt="image" src="https://github.com/user-attachments/assets/a60c6ddd-a293-4661-b55f-6650469711e7" />
 
 
 
