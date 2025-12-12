@@ -150,19 +150,19 @@ Como resultado, cada noticia quedó representada mediante un vector correspondie
 
 Para el entrenamiento y evaluación de los modelos se han empleado tres algoritmos de clasificación de la librería Scikit-learn, una red neuronal en PyTorch y un modelo Transformer preentrenado  ajustado mediante fine-tuning.
 
-- Regresión logística: la implementación se realizó mediante la clase LogisticRegression, y como hiperparámetros configurado a resaltar tenemos “max_iter”, que se fijó a 300.  Dicho valor que se seleccionó tras probar configuraciones con 100 y 200 iteraciones
+- **Regresión logística:** la implementación se realizó mediante la clase LogisticRegression, y como hiperparámetros configurado a resaltar tenemos “max_iter”, que se fijó a 300.  Dicho valor que se seleccionó tras probar configuraciones con 100 y 200 iteraciones
   
-- SVM: implementada mediante la clase LinearSVC con sus parámetros por defecto.
+- **SVM:** implementada mediante la clase LinearSVC con sus parámetros por defecto.
   
-- KNN: se realizó un ajuste mediante Grid Search, probando distintos valores del número de vecinos [3, 5, 7, 9, 11] sobre el conjunto de entrenamiento, y seleccionando la configuración óptima en función del accuracy.
+- **KNN:** se realizó un ajuste mediante Grid Search, probando distintos valores del número de vecinos [3, 5, 7, 9, 11] sobre el conjunto de entrenamiento, y seleccionando la configuración óptima en función del accuracy.
   
-- Red neuronal: para el entrenamiento se utilizó un tamaño de batch de 64 muestras. En cuanto a la arquitectura, la red neuronal está compuesta por tres capas totalmente conectadas, con normalización por lotes y función de activación ReLU en las capas intermedias. 
+- **Red neuronal:** para el entrenamiento se utilizó un tamaño de batch de 64 muestras. En cuanto a la arquitectura, la red neuronal está compuesta por tres capas totalmente conectadas, con normalización por lotes y función de activación ReLU en las capas intermedias. 
 
 El entrenamiento se realizó mediante el optimizador Adam y se fijó un máximo de 15 épocas utilizando la estrategia early stopping, para que si en 3 épocas no mejora el AUC en validación para el entrenamiento. 
 
 Durante la evaluación se aplica una función sigmoide para obtener probabilidades asociadas a la clase positiva. La función de pérdida utilizada fue BCEWithLogitsLoss.
 
-- Modelo Transformer con fine-tuning: se empleó el modelo preentrenado BERT-base uncased, adaptándolo a nuestro proyecto mediante un proceso de fine-tuning orientado a la clasificación de noticias reales y falsas. Para ello, se ajustaron los parámetros del modelo utilizando nuestro conjunto de entrenamiento. Una vez entrenado, se realizaron predicciones sobre el conjunto de test y se obtuvieron las métricas correspondientes, permitiendo evaluar su rendimiento y compararlo con el resto de modelos generados.
+- **Modelo Transformer con fine-tuning:** se empleó el modelo preentrenado BERT-base uncased, adaptándolo a nuestro proyecto mediante un proceso de fine-tuning orientado a la clasificación de noticias reales y falsas. Para ello, se ajustaron los parámetros del modelo utilizando nuestro conjunto de entrenamiento. Una vez entrenado, se realizaron predicciones sobre el conjunto de test y se obtuvieron las métricas correspondientes, permitiendo evaluar su rendimiento y compararlo con el resto de modelos generados.
 
 ## 5.Resultados experimentales.
 
@@ -182,12 +182,13 @@ En el caso de la regresión logística, se obtienen también buenos resultados, 
 En general, se observa un buen rendimiento global de los modelos evaluados, con la excepción de KNN, cuyo desempeño es notablemente inferior al del resto. Atendiendo a la precisión en la clase 0, los modelos pueden ordenarse de la siguiente forma: SVM>RN>LG>KNN
 
 ##### Mejor modelo clasificador para TF-IDF: SVM
+Para e
 
 
 ### Word2Vec
 <img width="643" height="112" alt="image" src="https://github.com/user-attachments/assets/7a448159-56f7-4abd-96b2-41eca2f53adb" />
 
-#### Presicion clase 0
+#### Precisión clase 0
 
 - La Red Neuronal demuestra ser la más fiable  para identificar noticias reales sin confundirlas con falsas (menos falsos positivos).
 - SVM y LR son razonablemente buenos.
@@ -201,7 +202,7 @@ El valor más alto es el obtenido por la red neuronal, convirtiéndo el modelo m
 ### BERT
 <img width="644" height="114" alt="image" src="https://github.com/user-attachments/assets/a60c6ddd-a293-4661-b55f-6650469711e7" />
 
-#### Presicion clase 0
+#### Precisión clase 0
 - La Red Neuronal vuelve a ser el modelo más fiable a la hora de clasificar una noticia como verdadera.
 - SVM y LR tienen un rendimiento  bueno y muy parecido.
 - KNN continúa con valores bajos, quedando descartado.
