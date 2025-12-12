@@ -73,14 +73,40 @@ polarización ideológica.
 
 ## 3.Explicación de las metodologías utilizadas.
 
+El  proyecto se desglosa en cuatro partes principales:
+
+- Preprocesamiento.
+- Vectorización.
+- Modelado.
+- Evaluación.
+
 ## 3.1. Preprocesamiento del texto
+
+Para el preprocesamiento del texto se han aplicado  técnicas estándar de NLP(Natural Language Processing). Estas técnicas se tratan de procedimientos fundamentales que permiten transformar texto en bruto en una representación totalmente estructurada, limpia y procesable por un modelo algorítmico.
+
+Estas técnicas sirven son utililes para reducir el ruido textual, normalizadar el lenguaje, extraer el significado de las palabras, preparar los datos para su posterior vectorización y mejorar el rendimiento de los modelos de clasificación. Si estas técnicas no se aplican previamente, el modelo trabajaría con un texto totalmente desordenado.
+
+A continuación, se encuentrán técnicas aplicadas al conjunto de datos, con el objetivo de obtener los mejores resultados podibles.
+
+- Conversión a minúsculas: evita que trate la misma palabra como palabras diferentes, reduciendo la dimensionalidad del vocabulario.
+  
+- Eliminación de símbolos y caracteres no alfanuméricos:  se suprimen elementos que no aportan ningun tipo de significado útil para la clasificación.
+  
+- Tokenización (NLTK): convierte el texto en una lista de palabras, permitiendo un análisis individual por palabra.
+  
+- Eliminación de stopwords: suprime palabras frecuentes con poco valor semántico, no aportando valor en la clasificación.
+  
+- Lematización (WordNet): transformación de las palabras a su forma base.
+
+El resultado se almacena en las columnas tokens y text_limpio, necesarias para las técnicas de vectorización.
 
 ## 3.2. Representación vectorial del texto
 
 - TF-TDF
 
-- Word2Vec
-- BERT (embeddings contextuales)
+- Word2Vec:
+- BERT (embeddings contextuales):
+- 
 
 
 ## 2.3. Modelos de clasificación
