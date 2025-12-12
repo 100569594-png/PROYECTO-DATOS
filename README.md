@@ -49,6 +49,13 @@ Estas diferencias semánticas pueden resultar útiles para la representación ve
 
 Además, se procedió a la visualización de las palabras más repetidas  mediante nubes de palabras para cada categoría. Esta representación afirma las tendencias de cada clase anteriormente comentadas, donde las noticias reales mostraron mayor diversidad léxica, mientras que las fake exhibieron concentraciones de palabras llamativas o polarizantes. 
 Estas representaciones visualen hacen posible  identificar de manera de forma sencilla  patrones de contenido que pueden relacionarse con estrategias de manipulación narrativa.
+<img width="944" height="501" alt="image" src="https://github.com/user-attachments/assets/80e9c094-09fa-4c0f-9a9b-5641eb1879ab" />
+<img width="931" height="493" alt="image" src="https://github.com/user-attachments/assets/a6c33a95-7c28-4390-82ab-b6dcfc7be6b8" />
+
+<img width="922" height="498" alt="image" src="https://github.com/user-attachments/assets/ce64a435-2a25-465c-a183-c662be45a21a" />
+<img width="934" height="499" alt="image" src="https://github.com/user-attachments/assets/2c809d38-efba-4232-a28d-9e35dd997d81" />
+
+
 
 
 ## 2.5. Ejemplos representativos por clase
