@@ -171,7 +171,7 @@ A lo largo de esta sección se presentan los resultados obtenidos para evaluar e
 
 Para la evaluación se emplearon distintas métricas de rendimiento, priorizando la precisión de la clase 0 (noticias reales), ya que para este contexto es especialmente relevante, y también el accuracy, proporcionando una medida sobre el rendimiento global del proyecto.
 
-A continuación se encuentran diferentes imágenes que comparán cada uno de los modelos de clasificación para cada técnica de representación vectorial del texto.
+A continuación se encuentran los resultados obtenidos, donde se compara cada uno de los modelos de clasificación para cada técnica de representación vectorial del texto.
 
 ### TF-IDF
 <img width="642" height="112" alt="image" src="https://github.com/user-attachments/assets/1daa2ebc-d407-4fee-9f1f-e31c52eb616d" />
