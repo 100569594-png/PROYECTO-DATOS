@@ -187,8 +187,13 @@ En general, se observa un buen rendimiento global de los modelos evaluados, con 
 ### Word2Vec
 <img width="643" height="112" alt="image" src="https://github.com/user-attachments/assets/7a448159-56f7-4abd-96b2-41eca2f53adb" />
 
-Incorpora información semántica, haciendo posible  que palabras con significados similares tengan representaciones vectoriales próximas. 
-La Red neuronal obtiene los mejores resultados, lo que significa que aprovecha de forma eficiente la información distribuida. Por otro lado,  SVM y Logistic Regression ofrecen un rendimiento adecuado, pero menor que en TF-IDF. KNN vuelve a ser el modelo más débil, aunque mejora  respecto a TF-IDF.Esto indica que los modelos lineales  se encuentran en desventaja, ya que este tipo de representación vectorial genera un espacio más complejo  y menos interpretable para los planos de separación lineales. Siguiendo la siguiente distribución entre modelos: RD>SVM> LG>KNN
+Los resultados muestran que la red neuronal es el modelo que obtiene el mejor rendimiento global, alcanzando una precisión de 0,92 en la clase 0 y la mayor accuracy (0,9316) entre los modelos evaluados. Esto indica una buena capacidad del modelo para aprovechar representaciones densas y capturar relaciones semánticas relevantes.
+
+El modelo SVM y la regresión logística presenta un rendimiento competitivo, situándose como alternativas de la red neuronal.
+
+Por último, el clasificador KNN vuelve a ser el modelo con peor comportamiento, especialmente en términos de precisión para detectar noticias verdaderas, lo que indica una mayor tasa de errores.
+
+Ordenando los modelos según su capacidad para clasificar correctamente noticias reales se nos quedaría la siguiente distribución: RD>SVM>LG>KNN 
 
 ##### Mejor modelo clasificador para Word2Vec: Red Neuronal
 
