@@ -135,9 +135,21 @@ Como resultado, cada noticia quedó representada mediante un vector correspondie
 
 ## 4. Modelos de clasificación
 
+Para el entrenamiento y evaluación de los modelos se han empleado tres algoritmos de clasificación de la librería Scikit-learn, una red neuronal en PyTorch y un modelo Transformer preentrenado  ajustado mediante fine-tuning.
 
+- Regresión logística: la implementación se realizó mediante la clase LogisticRegression, y como hiperparámetros configurado a resaltar tenemos “max_iter”, que se fijó a 300.  Dicho valor que se seleccionó tras probar configuraciones con 100 y 200 iteraciones
+  
+- SVM: implementada mediante la clase LinearSVC con sus parámetros por defecto.
+  
+- KNN: se realizó un ajuste mediante Grid Search, probando distintos valores del número de vecinos [3, 5, 7, 9, 11] sobre el conjunto de entrenamiento, y seleccionando la configuración óptima en función del accuracy.
+  
+- Red neuronal: para el entrenamiento se utilizó un tamaño de batch de 64 muestras. En cuanto a la arquitectura, la red neuronal está compuesta por tres capas totalmente conectadas, con normalización por lotes y función de activación ReLU en las capas intermedias. 
 
+El entrenamiento se realizó mediante el optimizador Adam y se fijó un máximo de 15 épocas utilizando la estrategia early stopping, para que si en 3 épocas no mejora el AUC en validación para el entrenamiento. 
 
+Durante la evaluación se aplica una función sigmoide para obtener probabilidades asociadas a la clase positiva. La función de pérdida utilizada fue BCEWithLogitsLoss.
+
+- Modelo Transformer con fine-tuning: se empleó el modelo preentrenado BERT-base uncased, adaptándolo a nuestro proyecto mediante un proceso de fine-tuning orientado a la clasificación de noticias reales y falsas. Para ello, se ajustaron los parámetros del modelo utilizando nuestro conjunto de entrenamiento. Una vez entrenado, se realizaron predicciones sobre el conjunto de test y se obtuvieron las métricas correspondientes, permitiendo evaluar su rendimiento y compararlo con el resto de modelos generados.
 
 ## 5.Resultados experimentales.
 
