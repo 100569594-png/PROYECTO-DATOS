@@ -88,9 +88,6 @@ Para el correcto desarrollo del proyecto  se empleó una estructura de tres subc
 #### -Conjunto de validación (validation): (20%)
 #### -Conjunto de prueba (test): (20%)
 
-
-
-## 3.3. Representación vectorial del texto
 Se han implementado tres técnicas de representación vectorial: TF-IDF, Word2Vec y embeddings contextuales. 
 
 ### TF-IDF (Term Frequency – Inverse Document Frequency) 
