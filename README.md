@@ -146,20 +146,52 @@ Como resultado, cada noticia quedó representada mediante un vector correspondie
 
 A lo largo de esta sección se presentan los resultados obtenidos tras el entrenamiento y evaluación de los  distintos modelos desarrollados. El propósito principal es seleccionar el modelo más adecuado para un sistema de clasificación verídica  de noticias.
 
-Para la evaluación, se ha priorizado la Precisión de la clase 0 (Noticias Reales). Esta métrica es clave para valorar el rendimiento del modelo,  ya que mide la proporción de aciertos sobre el total de noticias etiquetadas como verdaderas.
-El objetivo es asegurar una alta confianza  en las noticias validadas, reduciendo drásticamente la posibilidad de catalogar erróneamente una noticia falsa como real.
-
+Para la evaluación, se han jugado con diferenticas métricas, sin embargo, se ha dedidido priorizar la Precisión de la clase 0 (Noticias Reales). Esta métrica es clave para valorar el rendimiento del modelo,  ya que mide la proporción de aciertos sobre el total de noticias etiquetadas como verdaderas.El objetivo es asegurar una alta confianza  en las noticias validadas, reduciendo drásticamente la posibilidad de catalogar erróneamente una noticia falsa como real, lo que hace como punto de partida ideal 
 
 Por otro lado, también se tendrá en cuenta como métrica evaluable el accuracy, proporcionando qué porcentaje total de predicciones son correctas sin distinguir entre clases. 
 
+A continuación se encuentran diferentes imagenes que comparán cada uno de los modelos de clasificación para cada técnica de representación vectorial del texto.
 
-
+### TF-IDF
 <img width="642" height="112" alt="image" src="https://github.com/user-attachments/assets/1daa2ebc-d407-4fee-9f1f-e31c52eb616d" />
 
+#### Presicion clase 0
+- SVM es el más fiable para no catalogar noticias falsas como verdaderas, pues obtiene el porcentaje más alto en cuanto a presicion clase 0 en comparación con el resto de modelos.
+- La Red Neuronal y LR tienen un rendimiento muy parecido, también  adecuado.
+- KNN falla de forma grave, comete demasiados falsos positivos, lo que resulta en clasificar como verdaderas noticias falsas.
+
+#### Accuracy
+El valor más alto es el obtenido por SVM, siendo este el modelo más equilibrado y con mayor tasa de aciertos. Siguiendo la siguiente distribución: SVM>RN>LG>KNN
+
+#### Mejor modelo clasificador para TF-IDF: SVM
+
+
+### Word2Vec
 <img width="643" height="112" alt="image" src="https://github.com/user-attachments/assets/7a448159-56f7-4abd-96b2-41eca2f53adb" />
 
+#### Presicion clase 0
+
+- La Red Neuronal demuestra ser la más fiable  para identificar noticias reales sin confundirlas con falsas (menos falsos positivos).
+- SVM y LR son razonablemente buenos.
+- KNN es claramente el peor, comportamiento ya visto durante TF-IDF.
+#### Accuracy
+
+El valor más alto es el obtenido por la red neuronal, convirtiéndo el modelo más equilibrado y con mayor tasa de aciertos.Siguiendo la siguiente distribución entre modelos: RD>SVM> LG>KNN
+
+#### Mejor modelo clasificador para Word2Vec: Red Neuronal
+
+### BERT
 <img width="644" height="114" alt="image" src="https://github.com/user-attachments/assets/a60c6ddd-a293-4661-b55f-6650469711e7" />
 
+#### Presicion clase 0
+- La Red Neuronal vuelve a ser el modelo más fiable a la hora de clasificar una noticia como verdadera.
+- SVM y LR tienen un rendimiento  bueno y muy parecido.
+- KNN continúa con valores bajos, quedando descartado.
+  
+#### Accuracy
+El mejor resultado es obtenido por la Red Neuronal. Siguiendo la siguiente tendencia: RD>SVM> LG>KNN. 
+
+#### Mejor modelo clasificador para BERT: Red Neuronal
 
 
 ## Discusión
