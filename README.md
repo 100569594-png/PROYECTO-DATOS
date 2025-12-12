@@ -37,6 +37,7 @@ El análisis de la longitud por clase hizo notorias diferencias estructurales re
 - Las noticias fake presentan una tendencia a ser más cortas y menos diversas en su tamaño.
 
 Este patrón coincide con hallazgos en literatura previa sobre desinformación, donde los contenidos falsos suelen estar diseñados para ser rápidos de consumir y fáciles de  difundir.
+
 <img width="716" height="401" alt="Captura de pantalla 2025-12-12 a las 20 22 47" src="https://github.com/user-attachments/assets/ae5881ff-7b5d-4eec-92ec-65f8ae425e8a" />
 
 ## 2.4. Análisis preliminar del contenido textual
