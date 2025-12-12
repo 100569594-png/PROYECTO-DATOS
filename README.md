@@ -50,6 +50,26 @@ Con el objetivo de comprender mejor las características lingüísticas, se anal
 
 Estas diferencias semánticas pueden resultar útiles para la representación vectorial y el modelado.
 
+Además, se procedió a la visualización de las palabras más repetidas  mediante nubes de palabras para cada categoría. Esta representación afirma las tendencias de cada clase anteriormente comentadas, donde las noticias reales mostraron mayor diversidad léxica, mientras que las fake exhibieron concentraciones de palabras llamativas o polarizantes. 
+Estas representaciones visualen hacen posible  identificar de manera de forma sencilla  patrones de contenido que pueden relacionarse con estrategias de manipulación narrativa.
+
+
+## 2.5. Ejemplos representativos por clase
+Se examinaron muestras individuales de textos reales y falsos, lo que permitió identificar diferencias en el estilo de redacción:
+Las noticias reales suelen presentar estructuras más coherentes, referencias informativas y mayor profundidad descriptiva.
+Las noticias falsas tienden a utilizar frases más directas, simplificadas o diseñadas para provocar una respuesta emocional inmediata.
+Esta observación cualitativa complementa los hallazgos cuantitativos y apoya la hipótesis de que la desinformación sigue patrones estilísticos distintivos.
+
+## 2.6. Hipótesis iniciales
+
+A partir del análisis  de la base de datos pueden formularse varias hipótesis para guiar las etapas posteriores del proyecto:
+
+- La longitud del texto puede ser un posible  indicador útil para distinguir entre noticias reales y fake.
+- Las diferencias léxicas aportan para que las  representaciones vectoriales capten  patrones de discriminación relevantes.
+- Los términos emocionalmente cargados en noticias falsas apuntan a  una relación entre desinformación y
+polarización ideológica.
+
+
 
 ## 3.Explicación de las metodologías utilizadas.
 
