@@ -79,7 +79,7 @@ Luego se procedió a la tokenización del texto y a la eliminación de las stopw
 Como resultado de este proceso, se generó una versión limpia del texto que sirvió como entrada para los distintos métodos de vectorización empleados en el proyecto.
 
 
-## 3.2. Representación vectorial del texto
+## 3.2. División de los datos
 Una vez se ha completado el preprocesamiento del texto, se pasa a la división del conjunto de datos  en diferentes particiones  con el fin de garantizar un análisis objetivo de los diferentes modelos de clasificación. Esta división se trata de un proceso clave, mediante el cual puede  evitarse  el sobreajuste, permitiendo medir de forma totalmente realista la  capacidad de generalización del sistema ideado.
 
 Para el correcto desarrollo del proyecto  se empleó una estructura de tres subconjuntos:
@@ -88,6 +88,7 @@ Para el correcto desarrollo del proyecto  se empleó una estructura de tres subc
 #### -Conjunto de validación (validation): (20%)
 #### -Conjunto de prueba (test): (20%)
 
+## 3.2. Representación vectorial del texto
 Se han implementado tres técnicas de representación vectorial: TF-IDF, Word2Vec y embeddings contextuales. 
 
 ### TF-IDF (Term Frequency – Inverse Document Frequency) 
