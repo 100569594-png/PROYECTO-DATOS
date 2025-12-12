@@ -206,9 +206,13 @@ La Red neuronal obtiene los mejores resultados, lo que significa que aprovecha d
 
 
 Esto indica que los modelos lineales  se encuentran en desventaja, ya que este tipo de representación vectorial genera un espacio más complejo  y menos interpretable para los planos de separación lineales.
+### 6.3. BERT
+BERT ofrece la representación más avanzada, aprendiendo contextualmente mediante relaciones sintácticas y desambiguación semántica. En este caso, además, se aplicó fine-tuning, permitiendo que el modelo ajuste sus pesos.
+Entre los clasificadores evaluados, la Red neuronal destaca de forma clara, superando al resto de  clasificadores. Por un lado,  SVM y Logistic Regression obtienen rendimientos aceptables, aunque limitado por su linealidad. En contraste, KNN vuelve a mostrar el rendimiento más bajo, ya que es especialmente sensible a vectores de alta dimensión.
+BERT  es capaz de captar matices lingüísticos que TF-IDF y Word2Vec, lo que resulta clave en textos ambiguos o donde la manipulación informativa depende del tono, el contexto o la selección de palabras.
+En consecuencia, la red neuronal entrenada sobre los embeddings contextualizados de BERT puede definirse como el modelo más preciso y el que mejor se alinea con los objetivos. 
 
-
-## 5. Conclusiones
+## 7. Conclusiones
 
 
 bibliografia
