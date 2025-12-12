@@ -176,13 +176,10 @@ A continuación se encuentran los resultados obtenidos, donde se compara cada un
 ### TF-IDF
 <img width="642" height="112" alt="image" src="https://github.com/user-attachments/assets/1daa2ebc-d407-4fee-9f1f-e31c52eb616d" />
 
-#### Presicion clase 0
-- SVM es el más fiable para no catalogar noticias falsas como verdaderas, pues obtiene el porcentaje más alto en cuanto a presicion clase 0 en comparación con el resto de modelos.
-- La Red Neuronal y LR tienen un rendimiento muy parecido, también  adecuado.
-- KNN falla de forma grave, comete demasiados falsos positivos, lo que resulta en clasificar como verdaderas noticias falsas.
+El modelo SVM alcanza la mayor precisión en la clase 0, es decir, es el más preciso clasificando las noticias verdaderas. No obstante, la red neuronal también ofrece un rendimiento muy competitivo, con resultados cercanos a los obtenidos por SVM.
+En el caso de la regresión logística, se obtienen también buenos resultados, aunque inferiores a los de los modelos anteriores. Por su parte, el clasificador KNN es el que presenta el peor comportamiento, especialmente en la detección de noticias verdaderas, lo que limita su utilidad en este contexto.
 
-#### Accuracy
-El valor más alto es el obtenido por SVM, siendo este el modelo más equilibrado y con mayor tasa de aciertos. Siguiendo la siguiente distribución: SVM>RN>LG>KNN
+En general, se observa un buen rendimiento global de los modelos evaluados, con la excepción de KNN, cuyo desempeño es notablemente inferior al del resto. Atendiendo a la precisión en la clase 0, los modelos pueden ordenarse de la siguiente forma: SVM>RN>LG>KNN
 
 ##### Mejor modelo clasificador para TF-IDF: SVM
 
