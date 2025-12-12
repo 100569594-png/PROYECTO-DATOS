@@ -42,6 +42,14 @@ El análisis de la longitud por clase hizo notorias diferencias estructurales re
 
 Este patrón coincide con hallazgos en literatura previa sobre desinformación, donde los contenidos falsos suelen estar diseñados para ser rápidos de consumir y fáciles de  difundir.
 
+## 2.4. Análisis preliminar del contenido textual
+Con el objetivo de comprender mejor las características lingüísticas, se analizaron las palabras más frecuentes en cada clase. Donde se determino lo siguiente:
+
+- Las noticias reales poseen un  vocabulario más descriptivo, informativo y diverso.
+- Las noticias fake presentan una mayor repetición de términos cargados emocionalmente  o directamente vinculados a discursos sensacionalistas.
+
+Estas diferencias semánticas pueden resultar útiles para la representación vectorial y el modelado.
+
 
 ## 3.Explicación de las metodologías utilizadas.
 
