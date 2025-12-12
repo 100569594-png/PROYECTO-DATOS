@@ -163,7 +163,7 @@ A continuación se encuentran diferentes imagenes que comparán cada uno de los 
 #### Accuracy
 El valor más alto es el obtenido por SVM, siendo este el modelo más equilibrado y con mayor tasa de aciertos. Siguiendo la siguiente distribución: SVM>RN>LG>KNN
 
-#### Mejor modelo clasificador para TF-IDF: SVM
+##### Mejor modelo clasificador para TF-IDF: SVM
 
 
 ### Word2Vec
@@ -178,7 +178,7 @@ El valor más alto es el obtenido por SVM, siendo este el modelo más equilibrad
 
 El valor más alto es el obtenido por la red neuronal, convirtiéndo el modelo más equilibrado y con mayor tasa de aciertos.Siguiendo la siguiente distribución entre modelos: RD>SVM> LG>KNN
 
-#### Mejor modelo clasificador para Word2Vec: Red Neuronal
+##### Mejor modelo clasificador para Word2Vec: Red Neuronal
 
 ### BERT
 <img width="644" height="114" alt="image" src="https://github.com/user-attachments/assets/a60c6ddd-a293-4661-b55f-6650469711e7" />
@@ -191,7 +191,7 @@ El valor más alto es el obtenido por la red neuronal, convirtiéndo el modelo m
 #### Accuracy
 El mejor resultado es obtenido por la Red Neuronal. Siguiendo la siguiente tendencia: RD>SVM> LG>KNN. 
 
-#### Mejor modelo clasificador para BERT: Red Neuronal
+##### Mejor modelo clasificador para BERT: Red Neuronal
 
 
 ## Discusión
