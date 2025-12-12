@@ -214,7 +214,7 @@ En cuanto a la capacidad para detectar noticias verdaderas se tiene una precisi�
 
 ## 7. Conclusiones
 
-Antes de adentranos en las conclusiones, se quire recalcar que el objetivo principal ha sido identificar el modelo que sea capza de detecatr con mayor precion si la noticia es verdadera, y además que mostrara un buen rendimiento general.
+El objetivo principal ha sido identificar el modelo que sea capza de detecatr con mayor precion si la noticia es verdadera, y además que mostrara un buen rendimiento general.
 
 Los resultados obtenidos muestran que la elección de la representación vectorial juega un papel importante en el rendimiento de los modelos. En el caso de TF-IDF, los modelos lineales, especialmente SVM, presentan un comportamiento muy competitivo, alcanzando la mayor precisión en la detección de noticias reales. Para Word2Vec y embeddings BERT, la red neuronal destaca como el modelo más adecuado, demostrando una mayor capacidad para explotar representaciones densas y capturar relaciones semánticas complejas.
 
