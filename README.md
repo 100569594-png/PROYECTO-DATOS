@@ -69,8 +69,6 @@ A partir del análisis  de la base de datos pueden formularse varias hipótesis 
 - Los términos emocionalmente cargados en noticias falsas apuntan a  una relación entre desinformación y
 polarización ideológica.
 
-
-
 ## 3.Explicación de las metodologías utilizadas.
 
 El  proyecto se desglosa en cuatro partes principales:
@@ -88,15 +86,15 @@ Estas técnicas sirven son utililes para reducir el ruido textual, normalizadar 
 
 A continuación, se encuentrán técnicas aplicadas al conjunto de datos, con el objetivo de obtener los mejores resultados podibles.
 
-- Conversión a minúsculas: evita que trate la misma palabra como palabras diferentes, reduciendo la dimensionalidad del vocabulario.
+- #### Conversión a minúsculas: evita que trate la misma palabra como palabras diferentes, reduciendo la dimensionalidad del vocabulario.
   
-- Eliminación de símbolos y caracteres no alfanuméricos:  se suprimen elementos que no aportan ningun tipo de significado útil para la clasificación.
+- #### Eliminación de símbolos y caracteres no alfanuméricos:  se suprimen elementos que no aportan ningun tipo de significado útil para la clasificación.
   
-- Tokenización (NLTK): convierte el texto en una lista de palabras, permitiendo un análisis individual por palabra.
+- #### Tokenización (NLTK): convierte el texto en una lista de palabras, permitiendo un análisis individual por palabra.
   
-- Eliminación de stopwords: suprime palabras frecuentes con poco valor semántico, no aportando valor en la clasificación.
+- #### Eliminación de stopwords: suprime palabras frecuentes con poco valor semántico, no aportando valor en la clasificación.
   
-- Lematización (WordNet): transformación de las palabras a su forma base.
+- #### Lematización (WordNet): transformación de las palabras a su forma base.
 
 Una vez el preprocesado del texto ha finalizado, el resultado se almacena en las columnas tokens y text_limpio, necesarias para las técnicas de vectorización.
 
@@ -105,19 +103,20 @@ Una vez el preprocesado del texto ha finalizado, el resultado se almacena en las
 - TF-TDF
 
 - Word2Vec:
+- 
 - BERT (embeddings contextuales):
 - 
 
 
-## 2.3. Modelos de clasificación
+## 3.3. Modelos de clasificación
 
-## 3.Resultados experimentales.
+## 4.Resultados experimentales.
 
 
 
 ## Discusión
 
-## 4. Conclusiones
+## 5. Conclusiones
 
 
 bibliografia
