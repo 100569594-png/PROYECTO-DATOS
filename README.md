@@ -26,6 +26,7 @@ Antes de su utilización, se llevo a cabo un proceso de depuración pudiendo asi
 Se observó una distribución equilibrada entre noticias reales y falsas, lo que resulta beneficioso para el entrenamiento de modelos sin necesidad de aplicar técnicas de rebalanceo. Esta simetría entre las clases disminuye  el riesgo de sesgos hacia una categoría, permitiendo una evaluación más fiable.
 
 En cuanto a la longitud de los textos, se calculó el número de palabras por noticia. La mayoría de los artículos se  sitúan entre 100 y 600 palabras, con pocos casos que superan este rango. Este comportamiento es frecuente para textos periodísticos o derivados de redes sociales, donde predominan  breves piezas informativas. 
+<img width="716" height="401" alt="Captura de pantalla 2025-12-12 a las 20 22 47" src="https://github.com/user-attachments/assets/ae5881ff-7b5d-4eec-92ec-65f8ae425e8a" />
 
 
 ## 2.3. Comparación de longitudes entre noticias reales y fake
