@@ -194,7 +194,22 @@ El mejor resultado es obtenido por la Red Neuronal. Siguiendo la siguiente tende
 ##### Mejor modelo clasificador para BERT: Red Neuronal
 
 
-## Discusión
+## 6. Discusión
+
+Durante este proyecto se han evaluado tres técnicas de representación vectorial del texto TF-IDF, Word2Vec y BERT, combinadas cada una de ellas con diferentes modelos de clasificación: Logistic Regression, SVM, KNN y Red neuronal.
+ 
+### 6.1. TF-IDF
+Debido a que se basa en frecuencias sin incorporar contexto semántico muestra un rendimiento notablemente alto en modelos lineales como lo son Logistic Regression y SVM
+En cuanto a SVM, se obtienen los mejores resultados especialmente en accuracy y precision para ambas clases.  LR es prácticamente comparable a SVM, con resultados totalmente equilibrados. Por otro lado, KNN presenta el rendimiento más bajo, afectado por la alta dimensionalidad de TF-IDF. Por último, aunque la red neuronal ofrece resultados decentes, no supera a SVM, ya que debido a que TF-IDF no captura relaciones profundas entre palabras, se limita su potencial.
+Asimismo, TF-IDF proporciona una  representación robusta para modelos lineales. Su principal limitación es la falta de información semántica, lo que restringe la capacidad de los modelos más avanzados.
+
+### 6.2. Word2Vec
+Incorpora información semántica, haciendo posible  que palabras con significados similares tengan representaciones vectoriales próximas. 
+La Red neuronal obtiene los mejores resultados, lo que significa que aprovecha de forma eficiente la información distribuida. Por otro lado,  SVM y Logistic Regression ofrecen un rendimiento adecuado, pero menor que en TF-IDF. KNN vuelve a ser el modelo más débil, aunque mejora  respecto a TF-IDF.
+
+
+Esto indica que los modelos lineales  se encuentran en desventaja, ya que este tipo de representación vectorial genera un espacio más complejo  y menos interpretable para los planos de separación lineales.
+
 
 ## 5. Conclusiones
 
