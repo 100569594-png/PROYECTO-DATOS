@@ -2,8 +2,11 @@
 
 ## 1.Descripción del problema 
 Hoy en día, uno de los principales problemas a los que nos enfrentamos es la desinformación. Las redes sociales y los medios digitales facilitan la difusión rápida y masiva de contenidos, permitiendo que los usuarios compartan información sin que esta haya sido previamente verificada, lo que favorece la propagación de bulos y noticias falsas, y como consecuencia, se contribuye al aumento de la polarización ideológica.
+
 En este contexto, surge la necesidad de garantizar la veracidad de los textos, con el objetivo de mitigar los efectos de la desinformación. 
+
 Para ello, en este proyecto se realiza un preprocesamiento de los datos y se comparan distintas estrategias de representación vectorial del texto. En concreto, se implementan tres técnicas de vectorización, junto con varios modelos de clasificación supervisada de la librería scikit-learn y una red neuronal artificial.
+
 Finalmente, se emplea un modelo Transformer preentrenado mediante la librería Hugging Face, ajustado para la tarea de detección de noticias falsas. Y se compara con los modelos de clasificación implementados para determinar el más eficaz en la detección de contenido manipulado.
 
 
