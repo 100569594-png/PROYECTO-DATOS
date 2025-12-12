@@ -200,11 +200,11 @@ Ordenando los modelos según su capacidad para clasificar correctamente noticias
 ### BERT
 <img width="644" height="114" alt="image" src="https://github.com/user-attachments/assets/a60c6ddd-a293-4661-b55f-6650469711e7" />
 
-BERT ofrece la representación más avanzada, aprendiendo contextualmente mediante relaciones sintácticas y desambiguación semántica. En este caso, además, se aplicó fine-tuning, permitiendo que el modelo ajuste sus pesos.
-Entre los clasificadores evaluados, la Red neuronal destaca de forma clara, superando al resto de  clasificadores. Por un lado,  SVM y Logistic Regression obtienen rendimientos aceptables, aunque limitado por su linealidad. En contraste, KNN vuelve a mostrar el rendimiento más bajo, ya que es especialmente sensible a vectores de alta dimensión.
+Los resultados obtenidos muestran que la red neuronal es el modelo con mejor rendimiento al combinarse con embeddings BERT. Los modelos SVM y regresión logística presentan rendimientos similares, con precisiones de 0,89 y 0,88 respectivamente en la clase 0. Aunque estos resultados son aceptables, se sitúan por debajo de los obtenidos por la red neuronal.
 
-BERT  es capaz de captar matices lingüísticos que TF-IDF y Word2Vec, lo que resulta clave en textos ambiguos o donde la manipulación informativa depende del tono, el contexto o la selección de palabras.
-En consecuencia, la red neuronal entrenada sobre los embeddings contextualizados de BERT puede definirse como el modelo más preciso y el que mejor se alinea con los objetivos.  Siguiendo la siguiente tendencia: RD>SVM> LG>KNN. 
+Por su parte, KNN continúa mostrando un comportamiento inferior al resto de modelos, con una precisión de 0,81 en la clase 0.
+
+Atendiendo a la precisión en la clase 0, los modelos pueden ordenarse de la siguiente manera:RD>SVM>LG>KNN.
 
 ##### Mejor modelo clasificador para BERT: Red Neuronal
 
@@ -216,7 +216,12 @@ Este modelo obtiene el mejor rendimiento entre todas las técnicas evaluadas, al
 
 ## 7. Conclusiones
 
+BERT ofrece la representación más avanzada, aprendiendo contextualmente mediante relaciones sintácticas y desambiguación semántica.
 
+al utilizar En este caso, además, se aplicó fine-tuning, permitiendo que el modelo ajuste sus pesos.
+Entre los clasificadores evaluados, la Red neuronal destaca de forma clara, superando al resto de  clasificadores. Por un lado,  SVM y Logistic Regression obtienen rendimientos aceptables, aunque limitado por su linealidad. En contraste, KNN vuelve a mostrar el rendimiento más bajo, ya que es especialmente sensible a vectores de alta dimensión.
+
+BERT  es capaz de captar matices lingüísticos que TF-IDF y Word2Vec, lo que resulta clave en textos ambiguos o donde la manipulación informativa depende del tono, el contexto o la selección de palabras.
 
 ## 8. Bibliografía 
 
