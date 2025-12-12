@@ -211,6 +211,11 @@ El mejor resultado es obtenido por la Red Neuronal. Siguiendo la siguiente tende
 
 ##### Mejor modelo clasificador para BERT: Red Neuronal
 
+ 
+#### Modelo Transformer con fine-tuning
+
+<img width="683" height="185" alt="image" src="https://github.com/user-attachments/assets/253e8cbf-307c-4e23-97ef-9e58013706b5" />
+
 
 ## 6. Discusión
 
