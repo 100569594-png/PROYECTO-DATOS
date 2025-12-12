@@ -212,16 +212,22 @@ Atendiendo a la precisión en la clase 0, los modelos pueden ordenarse de la sig
 #### Modelo Transformer con fine-tuning
 
 <img width="683" height="185" alt="image" src="https://github.com/user-attachments/assets/253e8cbf-307c-4e23-97ef-9e58013706b5" />
-Este modelo obtiene el mejor rendimiento entre todas las técnicas evaluadas, alcanzando una accuracy del 99,31%. La precisión de la clase 0 (noticia real) es 0,9918, mientras que para la clase 1 (noticia falsa) asciende a 0,9945, lo que muestra que el modelo comete muy pocos falsos positivos y falsos negativos. Estos resultados hacen evidente la ventaja de los modelos transformer, capaces de capturar  dependencias semánticas y contextuales complejas.
+
+Los resultados obtenidos reflejan un buen rendimiento, el modelo alcanza una accuracy global de 99% evidenciando su capacidad para discriminar entre clases. 
+
+En cuanto a la capacidad para detectar noticias verdaderas se tiene una precisión 99%, lo que indica una elevada fiabilidad a la hora de validar noticias reales y un bajo número de falsos positivos.
 
 ## 7. Conclusiones
 
-BERT ofrece la representación más avanzada, aprendiendo contextualmente mediante relaciones sintácticas y desambiguación semántica.
+Antes de adentranos en las conclusiones, se quire recalcar que el objetivo principal ha sido identificar el modelo que sea capza de detecatr con mayor precion si la noticia es verdadera, y además que mostrara un buen rendimiento general.
 
-al utilizar En este caso, además, se aplicó fine-tuning, permitiendo que el modelo ajuste sus pesos.
-Entre los clasificadores evaluados, la Red neuronal destaca de forma clara, superando al resto de  clasificadores. Por un lado,  SVM y Logistic Regression obtienen rendimientos aceptables, aunque limitado por su linealidad. En contraste, KNN vuelve a mostrar el rendimiento más bajo, ya que es especialmente sensible a vectores de alta dimensión.
+Los resultados obtenidos muestran que la elección de la representación vectorial juega un papel importante en el rendimiento de los modelos. En el caso de TF-IDF, los modelos lineales, especialmente SVM, presentan un comportamiento muy competitivo, alcanzando la mayor precisión en la detección de noticias reales. Para Word2Vec y embeddings BERT, la red neuronal destaca como el modelo más adecuado, demostrando una mayor capacidad para explotar representaciones densas y capturar relaciones semánticas complejas.
 
-BERT  es capaz de captar matices lingüísticos que TF-IDF y Word2Vec, lo que resulta clave en textos ambiguos o donde la manipulación informativa depende del tono, el contexto o la selección de palabras.
+De forma consistente a lo largo de todos los experimentos, el clasificador K-NN ha mostrado un rendimiento claramente inferior al resto de modelos, especialmente en la detección de noticias reales, lo que limita su utilidad en este contexto. Por su parte, la regresión logística ofrece resultados estables y razonables, aunque generalmente por debajo de los obtenidos por SVM y la red neuronal.
+
+El mejor rendimiento global se obtiene con el modelo Transformer preentrenado ajustado mediante fine-tuning. Este enfoque supera al resto de técnicas evaluadas, alcanzando una accuracy del 99% y valores altos de precisión en ambas clases.
+
+Como conclusión, el modelo Transformer con fine-tuning se posiciona como el mejor clasificador para detectar la desinformación, y SVM con TF-IDF puede considerarse como alternativa entre los modelos propuestos.
 
 ## 8. Bibliografía 
 
