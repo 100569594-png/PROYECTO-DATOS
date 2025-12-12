@@ -14,8 +14,8 @@ Finalmente, se emplea un modelo Transformer preentrenado mediante la librería H
 
 La base de datos empleada proviene del WELFake Dataset, este conjunto de datos esta compuesto por un gran número de artículos clasificados en dos categorías:
 
-0 — Real
-1 — Fake
+- 0 — Real
+- 1 — Fake
 
 Las variables principales incluyen el texto completo de la noticia, su título (si se dispone de él) y la etiqueta asociada. Los datos se encuentran en formato  textual y numérico, lo que permite aplicar técnicas de procesado de lenguaje natural y análisis contextual.
 
