@@ -66,41 +66,63 @@ polarización ideológica.
 
 ## 3.Explicación de las metodologías utilizadas.
 
-El  proyecto se desglosa en cuatro partes principales:
-
-- Preprocesamiento.
-- Vectorización.
-- Modelado.
-- Evaluación.
+En esta sección se describe el procesamiento de los datos, la división del conjunto de datos,  la representación vectorial del texto y los modelos de clasificación utilizados.   
 
 ## 3.1. Preprocesamiento del texto
 
-Para el preprocesamiento del texto se han aplicado  técnicas estándar de NLP(Natural Language Processing). Estas técnicas se tratan de procedimientos fundamentales que permiten transformar texto en bruto en una representación totalmente estructurada, limpia y procesable por un modelo algorítmico.
+Para el preprocesamiento del texto se han aplicado  técnicas estándar de NLP(Natural Language Processing). Estas técnicas Antes de aplicar cualquier técnica de representación vectorial, se llevó a cabo un preprocesamiento del texto, que consiste en preparar y transformar el texto en un formato adecuado para su análisis.
 
-Estas técnicas sirven son utiles para reducir el ruido textual, normalizadar el lenguaje, extraer el significado de las palabras, preparar los datos para su posterior vectorización y mejorar el rendimiento de los modelos de clasificación. Si estas técnicas no se aplican previamente, el modelo trabajaría con un texto totalmente desordenado.
+El preprocesamiento que se ha seguido es el siguiente: en primer lugar, se ha convertido todo el texto a minúsculas y se eliminaron los caracteres especiales y  signos de puntuación.
 
-A continuación, se encuentrán técnicas aplicadas al conjunto de datos, con el objetivo de obtener los mejores resultados podibles.
+Luego se procedió a la tokenización del texto y a la eliminación de las stopwords en inglés. Por último, se aplicó la lematización de las palabras con el fin de reducirlas a su forma canónica.
 
-- #### Conversión a minúsculas: evita que trate la misma palabra como palabras diferentes, reduciendo la dimensionalidad del vocabulario.
-  
-- #### Eliminación de símbolos y caracteres no alfanuméricos:  se suprimen elementos que no aportan ningun tipo de significado útil para la clasificación.
-  
-- #### Tokenización (NLTK): convierte el texto en una lista de palabras, permitiendo un análisis individual por palabra.
-  
-- #### Eliminación de stopwords: suprime palabras frecuentes con poco valor semántico, no aportando valor en la clasificación.
-  
-- #### Lematización (WordNet): transformación de las palabras a su forma base.
+Como resultado de este proceso, se generó una versión limpia del texto que sirvió como entrada para los distintos métodos de vectorización empleados en el proyecto.
 
-Una vez el preprocesado del texto ha finalizado, el resultado se almacena en las columnas tokens y text_limpio, necesarias para las técnicas de vectorización.
 
 ## 3.2. Representación vectorial del texto
+Una vez se ha completado el preprocesamiento del texto, se pasa a la división del conjunto de datos  en diferentes particiones  con el fin de garantizar un análisis objetivo de los diferentes modelos de clasificación. Esta división se trata de un proceso clave, mediante el cual puede  evitarse  el sobreajuste, permitiendo medir de forma totalmente realista la  capacidad de generalización del sistema ideado.
 
-- TF-TDF
+Para el correcto desarrollo del proyecto  se empleó una estructura de tres subconjuntos:
 
-- Word2Vec:
-- 
-- BERT (embeddings contextuales):
-- 
+Conjunto de entrenamiento (train): (60%)
+Conjunto de validación (validation): (20%)
+Conjunto de prueba (test): (20%)
+
+
+
+## 3.3. Representación vectorial del texto
+Se han implementado tres técnicas de representación vectorial: TF-IDF, Word2Vec y embeddings contextuales. 
+
+### TF-IDF (Term Frequency – Inverse Document Frequency) 
+La vectorización se realizó utilizando la clase TfidfVectorizer de la librería scikit-learn, configurada con los siguientes parámetros:
+- max_features: Se limitó el vocabulario a un máximo de 20 000 características, seleccionando las palabras más frecuentes.
+  
+- ngram_range=(1,2): Se consideraron unigramas y bigramas con el objetivo de capturar tanto palabras individuales como combinaciones de dos términos.
+  
+- min_df: Se estableció una frecuencia mínima de 5 noticias
+La vectorización se ajustó sobre el conjunto de entrenamiento y se aplicó a los conjuntos de validación y test, quedando cada noticia representada mediante un vector de dimensión fija.
+
+
+#### Word2Vec
+La segunda técnica de representación vectorial es Word2Vec, que permite capturar relaciones semánticas entre términos a partir de su contexto de aparición.
+
+Para su implementación se utilizó la librería gensim y los hiperparámetros seleccionados fueron:
+
+- vector_size: Cada palabra se representa como un vector de 300 componentes.
+
+- window=2: Considerando las relaciones entre las dos palabras anteriores y semánticas. Se seleccionó un valor de 5 al principio, pero finalmente se ajustó a 2.
+
+- min_count: Se consideraron palabras que aparecieran al menos 20 veces en en el conjunto de datos.
+
+- sample: Se aplicó un umbral de submuestreo de 6×10^-5 para reducir la influencia de términos muy frecuentes.
+
+- alpha, min_alpha: se probaron distintos valores de tasa de aprendizaje, fijándose finalmente 0.03 y 0.0007, respectivamente.
+
+- negative: Se emplea un muestreo negativo de 20 muestras
+
+- sg=1: arquitectura Skip-gram
+
+Cada noticia se representa como el promedio de los vectores de las palabras que lo componen.
 
 
 ## 3.3. Modelos de clasificación
